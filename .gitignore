@@ -1,0 +1,5 @@
+__pycache__/
+data
+model
+logfile.log
+log

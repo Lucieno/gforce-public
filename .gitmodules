@@ -1,0 +1,4 @@
+[submodule "third_party/seal_python"]
+	path = seal_python
+	url = git@github.com:Lucieno/SEAL-Python.git
+    branch = master
