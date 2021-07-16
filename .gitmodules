@@ -2,3 +2,6 @@
 	path = seal_python
 	url = git@github.com:Lucieno/SEAL-Python.git
     branch = master
+[submodule "SEAL-Python"]
+	path = seal_python
+	url = git@github.com:Lucieno/SEAL-Python.git
