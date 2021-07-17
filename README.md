@@ -1,7 +1,7 @@
 # GForce
 **GForce: GPU-Friendly Oblivious and Rapid Neural Network Inference**
 
-A crypto-assisted framework leveraging GPU, additive secret share, and homomorphic encryption to protect the privacy of model and queries in inference.
+A crypto-assisted framework leveraging GPU, additive secret share, and homomorphic encryption to protect the privacy of models and queries in inference.
 
 The details of this project are presented in the following paper:
 
@@ -17,16 +17,16 @@ We tested our code on 2 Google Cloud VMs located in the same region. They were r
 - 8 Virtual Intel Xeon (Skylake) CPUs at 2GHz
 - 52 GB RAM
 
-Note that GPU is necessary.
+Note that GPU is necessary. Nvidia P100 GPU is also well suited with our code.
 
 ## How to Install
 1. Install [Anaconda](https://www.anaconda.com/), a Python package manager.
 
-2. Build a Anaconda virtual environment and install required packages as follows:
+2. Build an Anaconda virtual environment and install required packages as follows:
 
        conda env create -f conda_requirement.yml
 
-    It will create a virtual environment called `gforce`. Please activate this enviroment by:
+    It will create a virtual environment called `gforce`. Please activate this environment by:
 
        conda activate gforce
   
@@ -53,7 +53,7 @@ Note that GPU is necessary.
 
               python src/secure_vgg.py --ip="$IpServer" -s 1
 
-- If you want to try running other neural networks (e.g., MiniONN's NN with MaxPool/AvgPool) or testing on CIFAR-100, 
+- If you want to try running other neural networks (e.g., [MiniONN](https://eprint.iacr.org/2017/452)'s NN with MaxPool/AvgPool) or testing on CIFAR-100, 
     you may add the argument `--test $TestName`.
     `$TestName` can be: 
     - `vgg_cifar10`
@@ -89,17 +89,17 @@ For testing the accuracy of our pre-trained GForce DNN (under modulo operations)
 where `$TestName` can be 
 - `vgg16_cifar10`
 - `vgg16_cifar100`
-- `minionn_maxpool` (for CIFAR-10)
+- `minionn_avgpool` (for CIFAR-10)
 - `minionn_maxpool` (for CIFAR-10)
 
 
 ## Disclaimer
 DO NOT USE THIS SOFTWARE TO SECURE ANY REAL-WORLD DATA OR COMPUTATION!
 
-This software is a proof-of-concept meant for performance testing of the GForce framework ONLY. It is full of security vulnerabilities that facilitate testing, debugging and performance measurements. In any real-world deployment, these vulnerabilities can be easily exploited to leak all user inputs.
+This software is a proof-of-concept meant for performance testing of the GForce framework ONLY. It is full of security vulnerabilities that facilitate testing, debugging, and performance measurements. In any real-world deployment, these vulnerabilities can be easily exploited to leak all user inputs.
 
-## Related Projects
-Our team also proposed [Goten: GPU-Outsourcing Trusted Execution of Neural Network Training](https://github.com/goten-team/Goten), a secure solution for privacy-preserving nerual network training.
+## Related Project
+Our team also proposed [Goten: GPU-Outsourcing Trusted Execution of Neural Network Training](https://github.com/goten-team/Goten), a secure solution for privacy-preserving neural network training.
 
 ## Acknowledgement
 Special thanks to [Anna P. Y. Woo](https://github.com/woopuiyung), who contributed a good chunk of code.
