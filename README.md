@@ -102,4 +102,5 @@ This software is a proof-of-concept meant for performance testing of the GForce 
 Our team also proposed [Goten: GPU-Outsourcing Trusted Execution of Neural Network Training](https://github.com/goten-team/Goten), a secure solution for privacy-preserving neural network training.
 
 ## Acknowledgement
-Special thanks to [Anna P. Y. Woo](https://github.com/woopuiyung), who contributed a good chunk of code.
+We also thanks [Anna P. Y. Woo](https://github.com/woopuiyung) for her countless effort in overcoming the issues for integrating GForce with SWALP, which resulted in impressive model accuracy in CIFAR-10/100 and generated the experimental data in the paper.
+
